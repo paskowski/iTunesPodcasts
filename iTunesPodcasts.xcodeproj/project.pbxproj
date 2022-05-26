@@ -17,6 +17,8 @@
 		621812B5283FE0C1003D54BB /* iTunesPodcastsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621812B4283FE0C1003D54BB /* iTunesPodcastsTests.swift */; };
 		621812BF283FE0C1003D54BB /* iTunesPodcastsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621812BE283FE0C1003D54BB /* iTunesPodcastsUITests.swift */; };
 		621812C1283FE0C1003D54BB /* iTunesPodcastsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621812C0283FE0C1003D54BB /* iTunesPodcastsUITestsLaunchTests.swift */; };
+		629FC700283FEB3900AF0192 /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC6FF283FEB3900AF0192 /* EndpointTests.swift */; };
+		629FC706283FEE0700AF0192 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC705283FEE0700AF0192 /* Endpoint.swift */; };
 		E7E8E9DF8521B83BC76E5432 /* Pods_iTunesPodcastsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49EC64974DA5CF1A4EFC716 /* Pods_iTunesPodcastsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,8 @@
 		621812BA283FE0C1003D54BB /* iTunesPodcastsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesPodcastsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		621812BE283FE0C1003D54BB /* iTunesPodcastsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesPodcastsUITests.swift; sourceTree = "<group>"; };
 		621812C0283FE0C1003D54BB /* iTunesPodcastsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesPodcastsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		629FC6FF283FEB3900AF0192 /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
+		629FC705283FEE0700AF0192 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		B16C94C402FC9792195FE622 /* Pods-iTunesPodcasts-iTunesPodcastsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesPodcasts-iTunesPodcastsUITests.debug.xcconfig"; path = "Target Support Files/Pods-iTunesPodcasts-iTunesPodcastsUITests/Pods-iTunesPodcasts-iTunesPodcastsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B49EC64974DA5CF1A4EFC716 /* Pods_iTunesPodcastsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesPodcastsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E045C1E7FF261986352AF7 /* Pods-iTunesPodcasts-iTunesPodcastsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesPodcasts-iTunesPodcastsUITests.release.xcconfig"; path = "Target Support Files/Pods-iTunesPodcasts-iTunesPodcastsUITests/Pods-iTunesPodcasts-iTunesPodcastsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 		6218129C283FE0C0003D54BB /* iTunesPodcasts */ = {
 			isa = PBXGroup;
 			children = (
+				629FC704283FEDFA00AF0192 /* Networking */,
 				6218129D283FE0C0003D54BB /* AppDelegate.swift */,
 				6218129F283FE0C0003D54BB /* SceneDelegate.swift */,
 				621812A1283FE0C0003D54BB /* ViewController.swift */,
@@ -128,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				621812B4283FE0C1003D54BB /* iTunesPodcastsTests.swift */,
+				629FC6FF283FEB3900AF0192 /* EndpointTests.swift */,
 			);
 			path = iTunesPodcastsTests;
 			sourceTree = "<group>";
@@ -139,6 +145,14 @@
 				621812C0283FE0C1003D54BB /* iTunesPodcastsUITestsLaunchTests.swift */,
 			);
 			path = iTunesPodcastsUITests;
+			sourceTree = "<group>";
+		};
+		629FC704283FEDFA00AF0192 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				629FC705283FEE0700AF0192 /* Endpoint.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		802AD5078EB2020D872321A8 /* Frameworks */ = {
@@ -423,6 +437,7 @@
 			files = (
 				621812A2283FE0C0003D54BB /* ViewController.swift in Sources */,
 				6218129E283FE0C0003D54BB /* AppDelegate.swift in Sources */,
+				629FC706283FEE0700AF0192 /* Endpoint.swift in Sources */,
 				621812A0283FE0C0003D54BB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				629FC700283FEB3900AF0192 /* EndpointTests.swift in Sources */,
 				621812B5283FE0C1003D54BB /* iTunesPodcastsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
