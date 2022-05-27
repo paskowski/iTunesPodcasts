@@ -6,10 +6,10 @@ class PodcastCellViewModel {
     let artworkUrl: URL
     let imageDownloader: ImageDownloader
 
-    init(artistName: String, trackName: String, imageUrl: URL, imageDownloader: ImageDownloader) {
+    init(artistName: String, trackName: String, artworkUrl: URL, imageDownloader: ImageDownloader) {
         self.artistName = artistName
         self.trackName = trackName
-        self.artworkUrl = imageUrl
+        self.artworkUrl = artworkUrl
         self.imageDownloader = imageDownloader
     }
 }

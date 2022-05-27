@@ -3,6 +3,7 @@ import Foundation
 struct Podcast: Equatable {
     let artistName: String
     let trackName: String
-    let artworkUrl: URL
+    let artworkUrlThumbnail: URL
+    let artworkUrlDetail: URL
     let releaseDate: Date
 }

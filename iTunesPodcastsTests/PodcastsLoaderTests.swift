@@ -50,7 +50,8 @@ class PodcastsLoaderTests: XCTestCase {
         let expectedPodcast = Podcast(
             artistName: "John Appleseed",
             trackName: "Great track",
-            artworkUrl: URL(string: "https://fake.com")!,
+            artworkUrlThumbnail: URL(string: "https://fake.com")!,
+            artworkUrlDetail: URL(string: "https://fake2.com")!,
             releaseDate: Date(timeIntervalSince1970: 1639742400)
         )
 
@@ -75,6 +76,7 @@ class PodcastsLoaderTests: XCTestCase {
                 "artistName": "John Appleseed",
                 "trackName": "Great track",
                 "artworkUrl100": "https://fake.com",
+                "artworkUrl600": "https://fake2.com",
                 "releaseDate": "2021-12-17T12:00:00Z"
             }
         ]

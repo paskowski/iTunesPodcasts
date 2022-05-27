@@ -9,13 +9,15 @@ struct PodcastsMapper {
     private struct Item: Decodable {
         let artistName: String
         let trackName: String
-        let artworkUrl: URL
+        let artworkUrlThumbnail: URL
+        let artworkUrlDetail: URL
         let releaseDate: Date
 
         enum CodingKeys: String, CodingKey {
             case artistName
             case trackName
-            case artworkUrl = "artworkUrl100"
+            case artworkUrlThumbnail = "artworkUrl100"
+            case artworkUrlDetail = "artworkUrl600"
             case releaseDate
         }
     }
@@ -28,7 +30,8 @@ struct PodcastsMapper {
             Podcast(
                 artistName: $0.artistName,
                 trackName: $0.trackName,
-                artworkUrl: $0.artworkUrl,
+                artworkUrlThumbnail: $0.artworkUrlThumbnail,
+                artworkUrlDetail: $0.artworkUrlDetail,
                 releaseDate: $0.releaseDate
             )
         }

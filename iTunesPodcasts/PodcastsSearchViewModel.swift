@@ -31,7 +31,7 @@ class PodcastsSearchViewModel {
                     PodcastCellViewModel(
                         artistName: $0.artistName,
                         trackName: $0.trackName,
-                        imageUrl: $0.artworkUrl,
+                        artworkUrl: $0.artworkUrlThumbnail,
                         imageDownloader: imageDownloader
                     )
                 }
