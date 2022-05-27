@@ -35,6 +35,7 @@
 		629FC7262840F5E000AF0192 /* PodcastsLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC7252840F5E000AF0192 /* PodcastsLoaderTests.swift */; };
 		629FC7282840FFC200AF0192 /* MockHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC7272840FFC200AF0192 /* MockHttpClient.swift */; };
 		629FC72A284104F800AF0192 /* PodcastCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC729284104F800AF0192 /* PodcastCellViewModel.swift */; };
+		629FC72C2841078500AF0192 /* PodcastsSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC72B2841078500AF0192 /* PodcastsSearchViewModel.swift */; };
 		E7E8E9DF8521B83BC76E5432 /* Pods_iTunesPodcastsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49EC64974DA5CF1A4EFC716 /* Pods_iTunesPodcastsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,7 @@
 		629FC7252840F5E000AF0192 /* PodcastsLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsLoaderTests.swift; sourceTree = "<group>"; };
 		629FC7272840FFC200AF0192 /* MockHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHttpClient.swift; sourceTree = "<group>"; };
 		629FC729284104F800AF0192 /* PodcastCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastCellViewModel.swift; sourceTree = "<group>"; };
+		629FC72B2841078500AF0192 /* PodcastsSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsSearchViewModel.swift; sourceTree = "<group>"; };
 		B16C94C402FC9792195FE622 /* Pods-iTunesPodcasts-iTunesPodcastsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesPodcasts-iTunesPodcastsUITests.debug.xcconfig"; path = "Target Support Files/Pods-iTunesPodcasts-iTunesPodcastsUITests/Pods-iTunesPodcasts-iTunesPodcastsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B49EC64974DA5CF1A4EFC716 /* Pods_iTunesPodcastsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesPodcastsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E045C1E7FF261986352AF7 /* Pods-iTunesPodcasts-iTunesPodcastsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesPodcasts-iTunesPodcastsUITests.release.xcconfig"; path = "Target Support Files/Pods-iTunesPodcasts-iTunesPodcastsUITests/Pods-iTunesPodcasts-iTunesPodcastsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				621812A8283FE0C1003D54BB /* LaunchScreen.storyboard */,
 				621812AB283FE0C1003D54BB /* Info.plist */,
 				629FC729284104F800AF0192 /* PodcastCellViewModel.swift */,
+				629FC72B2841078500AF0192 /* PodcastsSearchViewModel.swift */,
 			);
 			path = iTunesPodcasts;
 			sourceTree = "<group>";
@@ -539,6 +542,7 @@
 				629FC70A283FFDD400AF0192 /* NetworkSession.swift in Sources */,
 				629FC719284021FC00AF0192 /* Podcast.swift in Sources */,
 				629FC706283FEE0700AF0192 /* Endpoint.swift in Sources */,
+				629FC72C2841078500AF0192 /* PodcastsSearchViewModel.swift in Sources */,
 				629FC71E2840304500AF0192 /* PodcastCell.swift in Sources */,
 				621812A0283FE0C0003D54BB /* SceneDelegate.swift in Sources */,
 				629FC71628401CDB00AF0192 /* PodcastsLoader.swift in Sources */,
