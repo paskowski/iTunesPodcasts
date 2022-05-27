@@ -50,7 +50,8 @@ class PodcastsLoaderTests: XCTestCase {
         let expectedPodcast = Podcast(
             artistName: "John Appleseed",
             trackName: "Great track",
-            artworkUrl: URL(string: "https://fake.com")!
+            artworkUrl: URL(string: "https://fake.com")!,
+            releaseDate: Date(timeIntervalSince1970: 1639742400)
         )
 
         XCTAssertEqualStreams([[expectedPodcast]], podcastsObserver)
@@ -73,7 +74,8 @@ class PodcastsLoaderTests: XCTestCase {
             {
                 "artistName": "John Appleseed",
                 "trackName": "Great track",
-                "artworkUrl100": "https://fake.com"
+                "artworkUrl100": "https://fake.com",
+                "releaseDate": "2021-12-17T12:00:00Z"
             }
         ]
     }
