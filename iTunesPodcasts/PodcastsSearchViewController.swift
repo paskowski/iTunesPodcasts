@@ -11,12 +11,12 @@ class PodcastsSearchViewController: UIViewController {
         return searchBar
     }()
 
-    private let tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(PodcastCell.self, forCellReuseIdentifier: PodcastCell.reuseIdentifier)
-        tableView.rowHeight = UITableView.automaticDimension
-        return tableView
+    private let podcastsTableView: UITableView = {
+        let podcastsTableView = UITableView()
+        podcastsTableView.translatesAutoresizingMaskIntoConstraints = false
+        podcastsTableView.register(PodcastCell.self, forCellReuseIdentifier: PodcastCell.reuseIdentifier)
+        podcastsTableView.rowHeight = UITableView.automaticDimension
+        return podcastsTableView
     }()
 
     private let disposeBag = DisposeBag()
@@ -39,17 +39,17 @@ class PodcastsSearchViewController: UIViewController {
 
     private func setupLayout() {
         view.backgroundColor = .white
-        [searchBar, tableView].forEach(view.addSubview)
+        [searchBar, podcastsTableView].forEach(view.addSubview)
 
         NSLayoutConstraint.activate([
             searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
 
-            tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            podcastsTableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor),
+            podcastsTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            podcastsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            podcastsTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
     }
 
@@ -58,7 +58,7 @@ class PodcastsSearchViewController: UIViewController {
             .foundPodcasts
             .asDriver(onErrorJustReturn: [])
             .drive(
-                tableView.rx.items(
+                podcastsTableView.rx.items(
                     cellIdentifier: PodcastCell.reuseIdentifier,
                     cellType: PodcastCell.self
                 )
