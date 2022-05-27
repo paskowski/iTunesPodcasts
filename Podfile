@@ -15,8 +15,4 @@ target 'iTunesPodcasts' do
     pod 'RxTest', '6.5.0'
   end
 
-  target 'iTunesPodcastsUITests' do
-    # Pods for testing
-  end
-
 end
