@@ -32,6 +32,8 @@
 		629FC7282840FFC200AF0192 /* MockHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC7272840FFC200AF0192 /* MockHttpClient.swift */; };
 		629FC72A284104F800AF0192 /* PodcastCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC729284104F800AF0192 /* PodcastCellViewModel.swift */; };
 		629FC72C2841078500AF0192 /* PodcastsSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC72B2841078500AF0192 /* PodcastsSearchViewModel.swift */; };
+		629FC72E28410B9500AF0192 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC72D28410B9500AF0192 /* ImageDownloader.swift */; };
+		629FC7312841146900AF0192 /* SDImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC7302841146900AF0192 /* SDImageDownloader.swift */; };
 		E7E8E9DF8521B83BC76E5432 /* Pods_iTunesPodcastsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49EC64974DA5CF1A4EFC716 /* Pods_iTunesPodcastsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,8 @@
 		629FC7272840FFC200AF0192 /* MockHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHttpClient.swift; sourceTree = "<group>"; };
 		629FC729284104F800AF0192 /* PodcastCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastCellViewModel.swift; sourceTree = "<group>"; };
 		629FC72B2841078500AF0192 /* PodcastsSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsSearchViewModel.swift; sourceTree = "<group>"; };
+		629FC72D28410B9500AF0192 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		629FC7302841146900AF0192 /* SDImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDImageDownloader.swift; sourceTree = "<group>"; };
 		B16C94C402FC9792195FE622 /* Pods-iTunesPodcasts-iTunesPodcastsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesPodcasts-iTunesPodcastsUITests.debug.xcconfig"; path = "Target Support Files/Pods-iTunesPodcasts-iTunesPodcastsUITests/Pods-iTunesPodcasts-iTunesPodcastsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B49EC64974DA5CF1A4EFC716 /* Pods_iTunesPodcastsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesPodcastsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E045C1E7FF261986352AF7 /* Pods-iTunesPodcasts-iTunesPodcastsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesPodcasts-iTunesPodcastsUITests.release.xcconfig"; path = "Target Support Files/Pods-iTunesPodcasts-iTunesPodcastsUITests/Pods-iTunesPodcasts-iTunesPodcastsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 		629FC704283FEDFA00AF0192 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				629FC72F2841145500AF0192 /* ImageDownloader */,
 				629FC72128403ED500AF0192 /* HTTPClient */,
 				629FC72228403EE000AF0192 /* NetworkSession */,
 				629FC71A284021FF00AF0192 /* Mappers */,
@@ -217,6 +222,15 @@
 				629FC72328403F0600AF0192 /* URLSessionNetworkSession.swift */,
 			);
 			path = NetworkSession;
+			sourceTree = "<group>";
+		};
+		629FC72F2841145500AF0192 /* ImageDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				629FC72D28410B9500AF0192 /* ImageDownloader.swift */,
+				629FC7302841146900AF0192 /* SDImageDownloader.swift */,
+			);
+			path = ImageDownloader;
 			sourceTree = "<group>";
 		};
 		802AD5078EB2020D872321A8 /* Frameworks */ = {
@@ -428,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				629FC70F28401B6F00AF0192 /* URLSessionHTTPClient.swift in Sources */,
+				629FC72E28410B9500AF0192 /* ImageDownloader.swift in Sources */,
 				621812A2283FE0C0003D54BB /* PodcastsSearchViewController.swift in Sources */,
 				629FC72428403F0600AF0192 /* URLSessionNetworkSession.swift in Sources */,
 				629FC708283FFDB600AF0192 /* HTTPClient.swift in Sources */,
@@ -437,6 +452,7 @@
 				629FC719284021FC00AF0192 /* Podcast.swift in Sources */,
 				629FC706283FEE0700AF0192 /* Endpoint.swift in Sources */,
 				629FC72C2841078500AF0192 /* PodcastsSearchViewModel.swift in Sources */,
+				629FC7312841146900AF0192 /* SDImageDownloader.swift in Sources */,
 				629FC71E2840304500AF0192 /* PodcastCell.swift in Sources */,
 				621812A0283FE0C0003D54BB /* SceneDelegate.swift in Sources */,
 				629FC71628401CDB00AF0192 /* PodcastsLoader.swift in Sources */,

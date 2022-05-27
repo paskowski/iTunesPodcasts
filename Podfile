@@ -8,6 +8,7 @@ target 'iTunesPodcasts' do
   # Pods for iTunesPodcasts
   pod 'RxSwift', '6.5.0'
   pod 'RxCocoa', '6.5.0'
+  pod 'SDWebImage', '~> 5.0'
 
   target 'iTunesPodcastsTests' do
     inherit! :search_paths

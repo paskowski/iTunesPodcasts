@@ -25,8 +25,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         })
         let httpClient = URLSessionHTTPClient(networkSession: urlSessionNetworkSession)
         let podcastsLoader = PodcastsLoader(httpClient: httpClient)
-        let podcastsSearchViewModel = PodcastsSearchViewModel(podcastsLoader: podcastsLoader)
-        window?.rootViewController = PodcastsSearchViewController(podcastsSearchViewModel: podcastsSearchViewModel)
+        let imageDownloader = SDImageDownloader()
+        let podcastsSearchViewModel = PodcastsSearchViewModel(
+            podcastsLoader: podcastsLoader,
+            imageDownloader: imageDownloader
+        )
+        let podcastsSearchViewController = PodcastsSearchViewController(
+            podcastsSearchViewModel: podcastsSearchViewModel
+        )
+        let navigationController = UINavigationController(rootViewController: podcastsSearchViewController)
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
 

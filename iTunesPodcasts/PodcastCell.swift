@@ -1,4 +1,5 @@
 import UIKit
+import RxSwift
 
 class PodcastCell: UITableViewCell {
 
@@ -23,6 +24,8 @@ class PodcastCell: UITableViewCell {
         return label
     }()
 
+    private var disposeBag = DisposeBag()
+
     static let reuseIdentifier = String(describing: self)
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -37,6 +40,11 @@ class PodcastCell: UITableViewCell {
     func configure(with viewModel: PodcastCellViewModel) {
         self.artistLabel.text = viewModel.artistName
         self.trackNameLabel.text = viewModel.trackName
+        viewModel.imageDownloader
+            .getImage(url: viewModel.artworkUrl)
+            .asDriver(onErrorJustReturn: UIImage())
+            .drive(artworkImageView.rx.image)
+            .disposed(by: disposeBag)
     }
 
     private func setupLayout() {
@@ -58,5 +66,10 @@ class PodcastCell: UITableViewCell {
             trackNameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
             trackNameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
         ])
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        disposeBag = DisposeBag()
     }
 }
