@@ -19,7 +19,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = ViewController()
+
+        let urlSessionNetworkSession = URLSessionNetworkSession(requestHandler: { request in
+            URLSession.shared.rx.data(request: request)
+        })
+        let httpClient = URLSessionHTTPClient(networkSession: urlSessionNetworkSession)
+        let podcastsLoader = PodcastsLoader(httpClient: httpClient)
+        let podcastsSearchViewModel = PodcastsSearchViewModel(podcastsLoader: podcastsLoader)
+        window?.rootViewController = PodcastsSearchViewController(podcastsSearchViewModel: podcastsSearchViewModel)
         window?.makeKeyAndVisible()
     }
 
