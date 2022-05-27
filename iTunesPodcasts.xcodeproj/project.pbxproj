@@ -17,10 +17,13 @@
 		621812B5283FE0C1003D54BB /* iTunesPodcastsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621812B4283FE0C1003D54BB /* iTunesPodcastsTests.swift */; };
 		621812BF283FE0C1003D54BB /* iTunesPodcastsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621812BE283FE0C1003D54BB /* iTunesPodcastsUITests.swift */; };
 		621812C1283FE0C1003D54BB /* iTunesPodcastsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621812C0283FE0C1003D54BB /* iTunesPodcastsUITestsLaunchTests.swift */; };
+		629FC6FE283FE4B200AF0192 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC6FD283FE4B200AF0192 /* URLSessionHTTPClientTests.swift */; };
 		629FC700283FEB3900AF0192 /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC6FF283FEB3900AF0192 /* EndpointTests.swift */; };
 		629FC706283FEE0700AF0192 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC705283FEE0700AF0192 /* Endpoint.swift */; };
 		629FC708283FFDB600AF0192 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC707283FFDB600AF0192 /* HTTPClient.swift */; };
 		629FC70A283FFDD400AF0192 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC709283FFDD400AF0192 /* NetworkSession.swift */; };
+		629FC70D283FFE0C00AF0192 /* MockNetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC70C283FFE0C00AF0192 /* MockNetworkSession.swift */; };
+		629FC70F28401B6F00AF0192 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC70E28401B6F00AF0192 /* URLSessionHTTPClient.swift */; };
 		629FC71128401BB000AF0192 /* URL+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC71028401BB000AF0192 /* URL+Mock.swift */; };
 		629FC71428401C4700AF0192 /* RxTest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC71328401C4700AF0192 /* RxTest+Extension.swift */; };
 		629FC72028403C4F00AF0192 /* URLSessionNetworkSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC71F28403C4F00AF0192 /* URLSessionNetworkSessionTests.swift */; };
@@ -61,10 +64,13 @@
 		621812BA283FE0C1003D54BB /* iTunesPodcastsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesPodcastsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		621812BE283FE0C1003D54BB /* iTunesPodcastsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesPodcastsUITests.swift; sourceTree = "<group>"; };
 		621812C0283FE0C1003D54BB /* iTunesPodcastsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesPodcastsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		629FC6FD283FE4B200AF0192 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		629FC6FF283FEB3900AF0192 /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
 		629FC705283FEE0700AF0192 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		629FC707283FFDB600AF0192 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		629FC709283FFDD400AF0192 /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
+		629FC70C283FFE0C00AF0192 /* MockNetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkSession.swift; sourceTree = "<group>"; };
+		629FC70E28401B6F00AF0192 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		629FC71028401BB000AF0192 /* URL+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Mock.swift"; sourceTree = "<group>"; };
 		629FC71328401C4700AF0192 /* RxTest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxTest+Extension.swift"; sourceTree = "<group>"; };
 		629FC71F28403C4F00AF0192 /* URLSessionNetworkSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNetworkSessionTests.swift; sourceTree = "<group>"; };
@@ -147,6 +153,7 @@
 				629FC71228401C3700AF0192 /* TestHelpers */,
 				629FC70B283FFE0100AF0192 /* Mocks */,
 				621812B4283FE0C1003D54BB /* iTunesPodcastsTests.swift */,
+				629FC6FD283FE4B200AF0192 /* URLSessionHTTPClientTests.swift */,
 				629FC6FF283FEB3900AF0192 /* EndpointTests.swift */,
 				629FC71F28403C4F00AF0192 /* URLSessionNetworkSessionTests.swift */,
 			);
@@ -175,6 +182,7 @@
 		629FC70B283FFE0100AF0192 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				629FC70C283FFE0C00AF0192 /* MockNetworkSession.swift */,
 				629FC71028401BB000AF0192 /* URL+Mock.swift */,
 			);
 			path = Mocks;
@@ -192,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				629FC707283FFDB600AF0192 /* HTTPClient.swift */,
+				629FC70E28401B6F00AF0192 /* URLSessionHTTPClient.swift */,
 			);
 			path = HTTPClient;
 			sourceTree = "<group>";
@@ -485,6 +494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				629FC70F28401B6F00AF0192 /* URLSessionHTTPClient.swift in Sources */,
 				621812A2283FE0C0003D54BB /* ViewController.swift in Sources */,
 				629FC72428403F0600AF0192 /* URLSessionNetworkSession.swift in Sources */,
 				629FC708283FFDB600AF0192 /* HTTPClient.swift in Sources */,
@@ -499,8 +509,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				629FC6FE283FE4B200AF0192 /* URLSessionHTTPClientTests.swift in Sources */,
 				629FC700283FEB3900AF0192 /* EndpointTests.swift in Sources */,
 				621812B5283FE0C1003D54BB /* iTunesPodcastsTests.swift in Sources */,
+				629FC70D283FFE0C00AF0192 /* MockNetworkSession.swift in Sources */,
 				629FC71128401BB000AF0192 /* URL+Mock.swift in Sources */,
 				629FC72028403C4F00AF0192 /* URLSessionNetworkSessionTests.swift in Sources */,
 				629FC71428401C4700AF0192 /* RxTest+Extension.swift in Sources */,
