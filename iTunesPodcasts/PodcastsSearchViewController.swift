@@ -25,6 +25,7 @@ class PodcastsSearchViewController: UIViewController {
     init(podcastsSearchViewModel: PodcastsSearchViewModel) {
         self.podcastsSearchViewModel = podcastsSearchViewModel
         super.init(nibName: nil, bundle: nil)
+        self.title = "Podcasts"
     }
 
     required init?(coder: NSCoder) {
@@ -55,7 +56,7 @@ class PodcastsSearchViewController: UIViewController {
 
     private func setupBindings() {
         podcastsSearchViewModel
-            .foundPodcasts
+            .podcastsCellsViewModels
             .asDriver(onErrorJustReturn: [])
             .drive(
                 podcastsTableView.rx.items(
@@ -65,6 +66,18 @@ class PodcastsSearchViewController: UIViewController {
             ) { indexPath, podcastCellViewModel, cell in
                 cell.configure(with: podcastCellViewModel)
             }
+            .disposed(by: disposeBag)
+
+        podcastsTableView.rx.itemSelected
+            .bind(to: podcastsSearchViewModel.tappedCellIndexPathRelay)
+            .disposed(by: disposeBag)
+
+        podcastsSearchViewModel.navigateToDetailsScreen
+            .withUnretained(self)
+            .subscribe(onNext: { owner, viewModel in
+                let detailsViewController = PodcastDetailsViewController(podcastDetailsViewModel: viewModel)
+                owner.navigationController?.pushViewController(detailsViewController, animated: true)
+            })
             .disposed(by: disposeBag)
 
         searchBar.rx.text

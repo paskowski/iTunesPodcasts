@@ -5,6 +5,11 @@ class PodcastsSearchViewModel {
 
     private let podcastsLoader: PodcastsLoader
     private let imageDownloader: ImageDownloader
+    private let dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
+        return dateFormatter
+    }()
 
     init(podcastsLoader: PodcastsLoader, imageDownloader: ImageDownloader) {
         self.podcastsLoader = podcastsLoader
@@ -35,6 +40,24 @@ class PodcastsSearchViewModel {
                         imageDownloader: imageDownloader
                     )
                 }
+            }
+    }
+
+    let tappedCellIndexPathRelay = PublishRelay<IndexPath>()
+
+    var navigateToDetailsScreen: Observable<PodcastDetailsViewModel> {
+        tappedCellIndexPathRelay
+            .withLatestFrom(foundPodcasts) { indexPath, podcasts in
+                podcasts[indexPath.row]
+            }
+            .map { [imageDownloader, dateFormatter] in
+                PodcastDetailsViewModel(
+                    artistName: $0.artistName,
+                    trackName: $0.trackName,
+                    artworkUrl: $0.artworkUrlDetail,
+                    releaseDate: dateFormatter.string(from: $0.releaseDate),
+                    imageDownloader: imageDownloader
+                )
             }
     }
 }
