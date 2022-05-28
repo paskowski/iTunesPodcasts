@@ -36,6 +36,7 @@
 		629FC7312841146900AF0192 /* SDImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC7302841146900AF0192 /* SDImageDownloader.swift */; };
 		629FC73328415A5D00AF0192 /* PodcastDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC73228415A5D00AF0192 /* PodcastDetailsViewModel.swift */; };
 		629FC73528415B4400AF0192 /* PodcastDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC73428415B4400AF0192 /* PodcastDetailsViewController.swift */; };
+		629FC73728423DE800AF0192 /* PodcastsSearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC73628423DE800AF0192 /* PodcastsSearchViewModelTests.swift */; };
 		629FC739284240E800AF0192 /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC738284240E800AF0192 /* TestAppDelegate.swift */; };
 		629FC73B2842420400AF0192 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC73A2842420400AF0192 /* main.swift */; };
 		629FC73D2842438800AF0192 /* MockPodcastsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC73C2842438800AF0192 /* MockPodcastsLoader.swift */; };
@@ -91,6 +92,7 @@
 		629FC7302841146900AF0192 /* SDImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDImageDownloader.swift; sourceTree = "<group>"; };
 		629FC73228415A5D00AF0192 /* PodcastDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastDetailsViewModel.swift; sourceTree = "<group>"; };
 		629FC73428415B4400AF0192 /* PodcastDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastDetailsViewController.swift; sourceTree = "<group>"; };
+		629FC73628423DE800AF0192 /* PodcastsSearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsSearchViewModelTests.swift; sourceTree = "<group>"; };
 		629FC738284240E800AF0192 /* TestAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppDelegate.swift; sourceTree = "<group>"; };
 		629FC73A2842420400AF0192 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		629FC73C2842438800AF0192 /* MockPodcastsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPodcastsLoader.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				629FC6FF283FEB3900AF0192 /* EndpointTests.swift */,
 				629FC71F28403C4F00AF0192 /* URLSessionNetworkSessionTests.swift */,
 				629FC7252840F5E000AF0192 /* RemotePodcastsLoaderTests.swift */,
+				629FC73628423DE800AF0192 /* PodcastsSearchViewModelTests.swift */,
 				629FC738284240E800AF0192 /* TestAppDelegate.swift */,
 			);
 			path = iTunesPodcastsTests;
