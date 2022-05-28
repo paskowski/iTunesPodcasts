@@ -151,20 +151,16 @@
 		6218129C283FE0C0003D54BB /* iTunesPodcasts */ = {
 			isa = PBXGroup;
 			children = (
+				629FC74A2842BA1000AF0192 /* PodcastDetails */,
+				629FC7492842B9FA00AF0192 /* PodcastsSearch */,
 				629FC717284021EC00AF0192 /* Models */,
 				629FC704283FEDFA00AF0192 /* Networking */,
 				6218129D283FE0C0003D54BB /* AppDelegate.swift */,
 				629FC73A2842420400AF0192 /* main.swift */,
 				6218129F283FE0C0003D54BB /* SceneDelegate.swift */,
-				621812A1283FE0C0003D54BB /* PodcastsSearchViewController.swift */,
-				629FC73428415B4400AF0192 /* PodcastDetailsViewController.swift */,
-				629FC71D2840304500AF0192 /* PodcastCell.swift */,
 				621812A6283FE0C1003D54BB /* Assets.xcassets */,
 				621812A8283FE0C1003D54BB /* LaunchScreen.storyboard */,
 				621812AB283FE0C1003D54BB /* Info.plist */,
-				629FC729284104F800AF0192 /* PodcastCellViewModel.swift */,
-				629FC72B2841078500AF0192 /* PodcastsSearchViewModel.swift */,
-				629FC73228415A5D00AF0192 /* PodcastDetailsViewModel.swift */,
 			);
 			path = iTunesPodcasts;
 			sourceTree = "<group>";
@@ -261,6 +257,26 @@
 				629FC7302841146900AF0192 /* SDImageDownloader.swift */,
 			);
 			path = ImageDownloader;
+			sourceTree = "<group>";
+		};
+		629FC7492842B9FA00AF0192 /* PodcastsSearch */ = {
+			isa = PBXGroup;
+			children = (
+				621812A1283FE0C0003D54BB /* PodcastsSearchViewController.swift */,
+				629FC72B2841078500AF0192 /* PodcastsSearchViewModel.swift */,
+				629FC71D2840304500AF0192 /* PodcastCell.swift */,
+				629FC729284104F800AF0192 /* PodcastCellViewModel.swift */,
+			);
+			path = PodcastsSearch;
+			sourceTree = "<group>";
+		};
+		629FC74A2842BA1000AF0192 /* PodcastDetails */ = {
+			isa = PBXGroup;
+			children = (
+				629FC73428415B4400AF0192 /* PodcastDetailsViewController.swift */,
+				629FC73228415A5D00AF0192 /* PodcastDetailsViewModel.swift */,
+			);
+			path = PodcastDetails;
 			sourceTree = "<group>";
 		};
 		802AD5078EB2020D872321A8 /* Frameworks */ = {
@@ -588,7 +604,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -643,7 +659,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -661,6 +677,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U6L9RUE9J5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iTunesPodcasts/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -688,6 +705,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U6L9RUE9J5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iTunesPodcasts/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
