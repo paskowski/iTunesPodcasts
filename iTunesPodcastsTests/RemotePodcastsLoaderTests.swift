@@ -3,7 +3,7 @@ import RxSwift
 import RxTest
 @testable import iTunesPodcasts
 
-class PodcastsLoaderTests: XCTestCase {
+class RemotePodcastsLoaderTests: XCTestCase {
 
     var scheduler: TestScheduler!
     var disposeBag: DisposeBag!
@@ -19,7 +19,7 @@ class PodcastsLoaderTests: XCTestCase {
     }
 
     func testPodcastLoader_returnsEmptyArray_onLoadingEmptyPodcastData() {
-        let podcastsLoader = PodcastsLoader(
+        let podcastsLoader = RemotePodcastsLoader(
             httpClient: MockHttpClient(
                 mockData: { .just(self.createEmptyPodcastData()) }
             )
@@ -35,7 +35,7 @@ class PodcastsLoaderTests: XCTestCase {
     }
 
     func testPodcastLoader_returnsArrayWithPodcast_onLoadingCorrectNonEmptyPodcastData() {
-        let podcastsLoader = PodcastsLoader(
+        let podcastsLoader = RemotePodcastsLoader(
             httpClient: MockHttpClient(
                 mockData: { .just(self.createPodcastData()) }
             )

@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             URLSession.shared.rx.data(request: request)
         })
         let httpClient = URLSessionHTTPClient(networkSession: urlSessionNetworkSession)
-        let podcastsLoader = PodcastsLoader(httpClient: httpClient)
+        let podcastsLoader = RemotePodcastsLoader(httpClient: httpClient)
         let imageDownloader = SDImageDownloader()
         let podcastsSearchViewModel = PodcastsSearchViewModel(
             podcastsLoader: podcastsLoader,

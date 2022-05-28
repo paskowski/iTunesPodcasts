@@ -1,7 +1,11 @@
 import Foundation
 import RxSwift
 
-class PodcastsLoader {
+protocol PodcastsLoader {
+    func loadPodcasts(for query: String) -> Observable<[Podcast]>
+}
+
+class RemotePodcastsLoader: PodcastsLoader {
     private let httpClient: HTTPClient
 
     init(httpClient: HTTPClient) {
