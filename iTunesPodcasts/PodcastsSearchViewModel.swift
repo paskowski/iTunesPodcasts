@@ -16,7 +16,7 @@ class PodcastsSearchViewModel {
         self.imageDownloader = imageDownloader
     }
 
-    let searchTextDidChangeRelay = PublishSubject<String>()
+    let searchTextDidChangeRelay = PublishRelay<String>()
 
     private var foundPodcasts: Observable<[Podcast]> {
         searchTextDidChangeRelay
