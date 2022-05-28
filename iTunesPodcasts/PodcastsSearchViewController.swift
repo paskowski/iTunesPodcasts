@@ -69,7 +69,8 @@ class PodcastsSearchViewController: UIViewController {
             .disposed(by: disposeBag)
 
         podcastsTableView.rx.itemSelected
-            .bind(to: podcastsSearchViewModel.tappedCellIndexPathRelay)
+            .map { $0.row }
+            .bind(to: podcastsSearchViewModel.tappedCellIndexRelay)
             .disposed(by: disposeBag)
 
         podcastsSearchViewModel.navigateToDetailsScreen

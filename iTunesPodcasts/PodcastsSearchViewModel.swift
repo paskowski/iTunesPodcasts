@@ -1,7 +1,7 @@
 import RxSwift
 import RxRelay
 
-class PodcastsSearchViewModel {
+final class PodcastsSearchViewModel {
 
     private let podcastsLoader: PodcastsLoader
     private let imageDownloader: ImageDownloader
@@ -10,18 +10,25 @@ class PodcastsSearchViewModel {
         dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
         return dateFormatter
     }()
+    private let scheduler: SchedulerType
 
-    init(podcastsLoader: PodcastsLoader, imageDownloader: ImageDownloader) {
+    init(podcastsLoader: PodcastsLoader, imageDownloader: ImageDownloader, scheduler: SchedulerType = MainScheduler.instance) {
         self.podcastsLoader = podcastsLoader
         self.imageDownloader = imageDownloader
+        self.scheduler = scheduler
     }
 
+    // Inputs
+
     let searchTextDidChangeRelay = PublishRelay<String>()
+    let tappedCellIndexRelay = PublishRelay<Int>()
+
+    // Outputs
 
     private var foundPodcasts: Observable<[Podcast]> {
         searchTextDidChangeRelay
             .skip(1)
-            .throttle(.milliseconds(250), scheduler: MainScheduler.instance)
+            .throttle(.milliseconds(250), scheduler: scheduler)
             .distinctUntilChanged()
             .flatMap {
                 self.podcastsLoader.loadPodcasts(for: $0)
@@ -43,12 +50,10 @@ class PodcastsSearchViewModel {
             }
     }
 
-    let tappedCellIndexPathRelay = PublishRelay<IndexPath>()
-
     var navigateToDetailsScreen: Observable<PodcastDetailsViewModel> {
-        tappedCellIndexPathRelay
-            .withLatestFrom(foundPodcasts) { indexPath, podcasts in
-                podcasts[indexPath.row]
+        tappedCellIndexRelay
+            .withLatestFrom(foundPodcasts) { index, podcasts in
+                podcasts[index]
             }
             .map { [imageDownloader, dateFormatter] in
                 PodcastDetailsViewModel(
