@@ -16,3 +16,19 @@ public func XCTAssertEqualStreams<T>(
         line: line
     )
 }
+
+public func XCTAssertStreamValuesCount<T>(
+    _ count: Int,
+    _ testObserver: TestableObserver<T>,
+    _ message: @autoclosure () -> String = "",
+    file: StaticString = #file,
+    line: UInt = #line
+) {
+    XCTAssertEqual(
+        count,
+        testObserver.events.compactMap { $0.value.element }.count,
+        message(),
+        file: file,
+        line: line
+    )
+}

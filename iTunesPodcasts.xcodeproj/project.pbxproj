@@ -38,6 +38,11 @@
 		629FC73528415B4400AF0192 /* PodcastDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC73428415B4400AF0192 /* PodcastDetailsViewController.swift */; };
 		629FC739284240E800AF0192 /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC738284240E800AF0192 /* TestAppDelegate.swift */; };
 		629FC73B2842420400AF0192 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC73A2842420400AF0192 /* main.swift */; };
+		629FC73D2842438800AF0192 /* MockPodcastsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC73C2842438800AF0192 /* MockPodcastsLoader.swift */; };
+		629FC73F2842440400AF0192 /* MockImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC73E2842440400AF0192 /* MockImageDownloader.swift */; };
+		629FC7412842444300AF0192 /* UIImage+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC7402842444300AF0192 /* UIImage+Mock.swift */; };
+		629FC7432842462300AF0192 /* Podcast+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC7422842462300AF0192 /* Podcast+Mock.swift */; };
+		629FC74528424FC700AF0192 /* TestSchedulers+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC74428424FC700AF0192 /* TestSchedulers+Extension.swift */; };
 		E7E8E9DF8521B83BC76E5432 /* Pods_iTunesPodcastsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49EC64974DA5CF1A4EFC716 /* Pods_iTunesPodcastsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +93,11 @@
 		629FC73428415B4400AF0192 /* PodcastDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastDetailsViewController.swift; sourceTree = "<group>"; };
 		629FC738284240E800AF0192 /* TestAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppDelegate.swift; sourceTree = "<group>"; };
 		629FC73A2842420400AF0192 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		629FC73C2842438800AF0192 /* MockPodcastsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPodcastsLoader.swift; sourceTree = "<group>"; };
+		629FC73E2842440400AF0192 /* MockImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImageDownloader.swift; sourceTree = "<group>"; };
+		629FC7402842444300AF0192 /* UIImage+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Mock.swift"; sourceTree = "<group>"; };
+		629FC7422842462300AF0192 /* Podcast+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Podcast+Mock.swift"; sourceTree = "<group>"; };
+		629FC74428424FC700AF0192 /* TestSchedulers+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestSchedulers+Extension.swift"; sourceTree = "<group>"; };
 		B16C94C402FC9792195FE622 /* Pods-iTunesPodcasts-iTunesPodcastsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesPodcasts-iTunesPodcastsUITests.debug.xcconfig"; path = "Target Support Files/Pods-iTunesPodcasts-iTunesPodcastsUITests/Pods-iTunesPodcasts-iTunesPodcastsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B49EC64974DA5CF1A4EFC716 /* Pods_iTunesPodcastsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesPodcastsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E045C1E7FF261986352AF7 /* Pods-iTunesPodcasts-iTunesPodcastsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesPodcasts-iTunesPodcastsUITests.release.xcconfig"; path = "Target Support Files/Pods-iTunesPodcasts-iTunesPodcastsUITests/Pods-iTunesPodcasts-iTunesPodcastsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -190,6 +200,10 @@
 				629FC70C283FFE0C00AF0192 /* MockNetworkSession.swift */,
 				629FC71028401BB000AF0192 /* URL+Mock.swift */,
 				629FC7272840FFC200AF0192 /* MockHttpClient.swift */,
+				629FC73C2842438800AF0192 /* MockPodcastsLoader.swift */,
+				629FC73E2842440400AF0192 /* MockImageDownloader.swift */,
+				629FC7402842444300AF0192 /* UIImage+Mock.swift */,
+				629FC7422842462300AF0192 /* Podcast+Mock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -198,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				629FC71328401C4700AF0192 /* RxTest+Extension.swift */,
+				629FC74428424FC700AF0192 /* TestSchedulers+Extension.swift */,
 			);
 			path = TestHelpers;
 			sourceTree = "<group>";
@@ -479,12 +494,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				629FC73F2842440400AF0192 /* MockImageDownloader.swift in Sources */,
+				629FC7412842444300AF0192 /* UIImage+Mock.swift in Sources */,
 				629FC7282840FFC200AF0192 /* MockHttpClient.swift in Sources */,
 				629FC6FE283FE4B200AF0192 /* URLSessionHTTPClientTests.swift in Sources */,
 				629FC700283FEB3900AF0192 /* EndpointTests.swift in Sources */,
 				629FC7262840F5E000AF0192 /* RemotePodcastsLoaderTests.swift in Sources */,
+				629FC74528424FC700AF0192 /* TestSchedulers+Extension.swift in Sources */,
 				629FC70D283FFE0C00AF0192 /* MockNetworkSession.swift in Sources */,
+				629FC73728423DE800AF0192 /* PodcastsSearchViewModelTests.swift in Sources */,
+				629FC73D2842438800AF0192 /* MockPodcastsLoader.swift in Sources */,
 				629FC739284240E800AF0192 /* TestAppDelegate.swift in Sources */,
+				629FC7432842462300AF0192 /* Podcast+Mock.swift in Sources */,
 				629FC71128401BB000AF0192 /* URL+Mock.swift in Sources */,
 				629FC72028403C4F00AF0192 /* URLSessionNetworkSessionTests.swift in Sources */,
 				629FC71428401C4700AF0192 /* RxTest+Extension.swift in Sources */,
