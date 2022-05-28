@@ -69,7 +69,7 @@ class PodcastCell: UITableViewCell {
     }
 
     override func prepareForReuse() {
-        super.prepareForReuse()
         disposeBag = DisposeBag()
+        super.prepareForReuse()
     }
 }
