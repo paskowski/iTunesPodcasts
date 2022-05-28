@@ -36,6 +36,8 @@
 		629FC7312841146900AF0192 /* SDImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC7302841146900AF0192 /* SDImageDownloader.swift */; };
 		629FC73328415A5D00AF0192 /* PodcastDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC73228415A5D00AF0192 /* PodcastDetailsViewModel.swift */; };
 		629FC73528415B4400AF0192 /* PodcastDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC73428415B4400AF0192 /* PodcastDetailsViewController.swift */; };
+		629FC739284240E800AF0192 /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC738284240E800AF0192 /* TestAppDelegate.swift */; };
+		629FC73B2842420400AF0192 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FC73A2842420400AF0192 /* main.swift */; };
 		E7E8E9DF8521B83BC76E5432 /* Pods_iTunesPodcastsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49EC64974DA5CF1A4EFC716 /* Pods_iTunesPodcastsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +86,8 @@
 		629FC7302841146900AF0192 /* SDImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDImageDownloader.swift; sourceTree = "<group>"; };
 		629FC73228415A5D00AF0192 /* PodcastDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastDetailsViewModel.swift; sourceTree = "<group>"; };
 		629FC73428415B4400AF0192 /* PodcastDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastDetailsViewController.swift; sourceTree = "<group>"; };
+		629FC738284240E800AF0192 /* TestAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppDelegate.swift; sourceTree = "<group>"; };
+		629FC73A2842420400AF0192 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B16C94C402FC9792195FE622 /* Pods-iTunesPodcasts-iTunesPodcastsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesPodcasts-iTunesPodcastsUITests.debug.xcconfig"; path = "Target Support Files/Pods-iTunesPodcasts-iTunesPodcastsUITests/Pods-iTunesPodcasts-iTunesPodcastsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B49EC64974DA5CF1A4EFC716 /* Pods_iTunesPodcastsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesPodcastsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E045C1E7FF261986352AF7 /* Pods-iTunesPodcasts-iTunesPodcastsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesPodcasts-iTunesPodcastsUITests.release.xcconfig"; path = "Target Support Files/Pods-iTunesPodcasts-iTunesPodcastsUITests/Pods-iTunesPodcasts-iTunesPodcastsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 				629FC717284021EC00AF0192 /* Models */,
 				629FC704283FEDFA00AF0192 /* Networking */,
 				6218129D283FE0C0003D54BB /* AppDelegate.swift */,
+				629FC73A2842420400AF0192 /* main.swift */,
 				6218129F283FE0C0003D54BB /* SceneDelegate.swift */,
 				621812A1283FE0C0003D54BB /* PodcastsSearchViewController.swift */,
 				629FC73428415B4400AF0192 /* PodcastDetailsViewController.swift */,
@@ -161,6 +166,7 @@
 				629FC6FF283FEB3900AF0192 /* EndpointTests.swift */,
 				629FC71F28403C4F00AF0192 /* URLSessionNetworkSessionTests.swift */,
 				629FC7252840F5E000AF0192 /* RemotePodcastsLoaderTests.swift */,
+				629FC738284240E800AF0192 /* TestAppDelegate.swift */,
 			);
 			path = iTunesPodcastsTests;
 			sourceTree = "<group>";
@@ -462,6 +468,7 @@
 				629FC73528415B4400AF0192 /* PodcastDetailsViewController.swift in Sources */,
 				629FC7312841146900AF0192 /* SDImageDownloader.swift in Sources */,
 				629FC71E2840304500AF0192 /* PodcastCell.swift in Sources */,
+				629FC73B2842420400AF0192 /* main.swift in Sources */,
 				621812A0283FE0C0003D54BB /* SceneDelegate.swift in Sources */,
 				629FC71628401CDB00AF0192 /* PodcastsLoader.swift in Sources */,
 				629FC72A284104F800AF0192 /* PodcastCellViewModel.swift in Sources */,
@@ -477,6 +484,7 @@
 				629FC700283FEB3900AF0192 /* EndpointTests.swift in Sources */,
 				629FC7262840F5E000AF0192 /* RemotePodcastsLoaderTests.swift in Sources */,
 				629FC70D283FFE0C00AF0192 /* MockNetworkSession.swift in Sources */,
+				629FC739284240E800AF0192 /* TestAppDelegate.swift in Sources */,
 				629FC71128401BB000AF0192 /* URL+Mock.swift in Sources */,
 				629FC72028403C4F00AF0192 /* URLSessionNetworkSessionTests.swift in Sources */,
 				629FC71428401C4700AF0192 /* RxTest+Extension.swift in Sources */,
